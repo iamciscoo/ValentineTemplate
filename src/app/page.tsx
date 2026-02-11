@@ -347,7 +347,7 @@ export default function Home() {
                             animate={{ opacity: 1 }}
                             transition={{ duration: 3, delay: 1.5 }}
                         >
-                            This is a journey through eight words.
+                            This is a journey through words.
                         </motion.p>
 
                         <motion.p
@@ -357,7 +357,7 @@ export default function Home() {
                             animate={{ opacity: 1 }}
                             transition={{ duration: 3, delay: 3 }}
                         >
-                            Eight words that, to me, are the only way to describe you.
+                            Words that, to me, are the only way to describe you.
                         </motion.p>
 
                         <motion.p
@@ -734,8 +734,8 @@ export default function Home() {
                                     transition={{ duration: 0.8 }}
                                 >
                                     {expandedArtifact
-                                        ? "she is just like a time machine to me everytime i am with her i travel back to my childhood her arms are so comfortable it feels like sleeping is much harder her smile is brighter than the sun that illuminates my dark life she is my everything with her everything is ease without her even breathing is harder she is my everything she is more precious to me than any other valuables her laugh holds a smooth soothing sense which calms my mind and makes me glance at her because how cute and pretty she look while laughing her eyes are like a black dark night that sucks up all my pain and suffering and give a look that is so soft that is so hypnotising her sense of humour is unmatchable she knows when and where to speak and about how to make up someone sad she lends ear to me she is my audience she is my biggest supporter she is my judge she is my autocorrect or who corrects me everytime she is my all time bestfriend she is my girlfriend and one and only one who understands me the most the one who finds pain in my silence and the one who know how to turn that pain into laughter her beauty is not an earthly thing but she herself is a heavenly being with her heavenly beauty she is so captivating none can take eyes off her she is my comfort she is my home"
-                                        : "sheisjustlikeatimemachinetomeeverytimeiamwithheritravelbacktomychildhoodherarmsaresocomfortableitfeelslikesleepingismuchharderhersmileisbrighterthanthesunthatilluminatesmydarklifesheismyeverythingwithherverythingiseasewithoutherevenbreathingishardersheismyeverythingsheismoreprecioustomethananyothervaluablesherlaughholdsasmoothsoothingsensewhichcalmsmymindandmakesmeglanceatherbecausehowcuteandprettyshelookwhilelaughinghereyesarelikeablackdarknightthatsucksupallmypainandsufferingandgivealookthatissosoftthatissohypnotisinghersenseofhumourisunmatchablesheknowswhenandwheretospeakandabouthowtomakeupsomeonesadshelendseartomesheismyaudiencesheismybiggestsupportersheismyjudgesheismyautocorrectorwhocorrectsmeeverytimsheismyalltimebestfriendsheismygirlfriendandoneandonleonewhounderstandsmethemosttheonewhofindspaininmysilenceandtheonewhoknowhowtoturnthatpainintolaughterherbeautyisnotanearthlythingbutsheherselfisaheavenlybeingwithherheavenlybeautysheissocaptivatingnonecantakeeyesoffhersheismycomfortsheismyhome"
+                                        ? "she is just like a time machine to me everytime i am with her i travel back to my childhood her arms are so comfortable it feels like sleeping is much harder her smile is brighter than the sun that illuminates my dark life with her everything is ease without her even breathing is harder she is more precious to me than any other valuables her laugh holds a smooth soothing sense which calms my mind and makes me glance at her because how cute and pretty she look while laughing her eyes are like a black dark night that sucks up all my pain and suffering and give a look that is so soft that is so hypnotising her sense of humour is unmatchable she knows when and where to speak and about how to make up someone sad she lends ear to me she is my audience she is my biggest supporter she is my judge she is my autocorrect or who corrects me everytime she might be my all time bestfriend she is my one and only one who understands me the most the one who know how to turn that pain into laughter her beauty is not an earthly thing but she herself is a heavenly being with her heavenly beauty she is so captivating none can take eyes off her she is my comfort she is love"
+                                        : "sheisjustlikeatimemachinetomeeverytimeiamwithheritravelbacktomychildhoodherarmsaresocomfortableitfeelslikesleepingismuchharderhersmileisbrighterthanthesunthatilluminatesmydarklifewithherverythingiseasewithoutherevenbreathingishardersheismoreprecioustomethananyothervaluablesherlaughholdsasmoothsoothingsensewhichcalmsmymindandmakesmeglanceatherbecausehowcuteandprettyshelookwhilelaughinghereyesarelikeablackdarknightthatsucksupallmypainandsufferingandgivealookthatissosoftthatissohypnotisinghersenseofhumourisunmatchablesheknowswhenandwheretospeakandabouthowtomakeupsomeonesadshelendseartomesheismyaudiencesheismybiggestsupportersheismyjudgesheismyautocorrectorwhocorrectsmeeverytimshemightbemyalltimebestfriendsheismyoneandonleonewhounderstandsmethemosttheonewhoknowhowtoturnthatpainintolaughterherbeautyisnotanearthlythingbutsheherselfisaheavenlybeingwithherheavenlybeautysheissocaptivatingnonecantakeeyesoffhersheismycomfortsheislove"
                                     }
                                 </motion.p>
 
@@ -779,25 +779,67 @@ export default function Home() {
                     <div className="act__inner">
                         <div className="question__container">
                             <Reveal>
-                                <p className="chapter-label" style={{ textAlign: "center" }}>Act VI</p>
+                                <p className="chapter-label" style={{ textAlign: "center" }}>ACT VI — LOVE</p>
                             </Reveal>
 
-                            <Reveal delay={0.3}>
-                                <p className="body-text" style={{ textAlign: "center", margin: "0 auto", maxWidth: "480px" }}>
-                                    I&apos;ve poured everything I feel into this. Every word, every breath, every
-                                    pixel of light. And there&apos;s still more I couldn&apos;t say. But there&apos;s one thing
-                                    I can say clearly.
-                                </p>
-                            </Reveal>
+                            <div className="question__letter" style={{ textAlign: "center", marginBottom: "80px" }}>
+                                <Reveal delay={0.2}>
+                                    <p className="body-text" style={{ margin: "0 auto 32px", maxWidth: "520px" }}>
+                                        I don&apos;t believe much in labels. Not because they don&apos;t matter, but because they&apos;re too small for what I feel.
+                                    </p>
+                                </Reveal>
 
-                            <Reveal delay={0.6}>
-                                <h2 className="question__main">
+                                <Reveal delay={0.4}>
+                                    <p className="body-text" style={{ margin: "0 auto 32px", maxWidth: "520px" }}>
+                                        Words like boyfriend and girlfriend try to simplify something that, to me, is anything but simple.
+                                    </p>
+                                </Reveal>
+
+                                <Reveal delay={0.6}>
+                                    <p className="body-text" style={{ margin: "0 auto 20px", maxWidth: "520px" }}>
+                                        What I believe in is choosing someone.
+                                    </p>
+                                    <p className="body-text" style={{ margin: "0 auto 20px", maxWidth: "520px" }}>
+                                        Showing up.
+                                    </p>
+                                    <p className="body-text" style={{ margin: "0 auto 20px", maxWidth: "520px" }}>
+                                        Listening.
+                                    </p>
+                                    <p className="body-text" style={{ margin: "0 auto 20px", maxWidth: "520px" }}>
+                                        Caring, even when it&apos;s inconvenient.
+                                    </p>
+                                    <p className="body-text" style={{ margin: "0 auto 32px", maxWidth: "520px" }}>
+                                        Staying, even when it&apos;s hard.
+                                    </p>
+                                </Reveal>
+
+                                <Reveal delay={0.8}>
+                                    <p className="body-text" style={{ margin: "0 auto 32px", maxWidth: "520px" }}>
+                                        I believe in love that feels safe. Love that feels honest. Love that doesn&apos;t need a name to be real, but chooses one anyway, because it wants to mean something.
+                                    </p>
+                                </Reveal>
+
+                                <Reveal delay={1.0}>
+                                    <p className="body-text" style={{ margin: "0 auto 32px", maxWidth: "520px" }}>
+                                        I&apos;ve poured everything I feel into this. Every word, every breath, every quiet thought I never knew how to say out loud.
+                                    </p>
+                                </Reveal>
+
+                                <Reveal delay={1.2}>
+                                    <p className="body-text" style={{ margin: "0 auto", maxWidth: "520px" }}>
+                                        And after all of it, there&apos;s one thing I know with certainty.
+                                    </p>
+                                </Reveal>
+                            </div>
+
+                            <Reveal delay={1.5}>
+                                <h2 className="question__main" style={{ marginTop: "40px" }}>
                                     Will you be my{" "}
-                                    <span className="question__highlight">girlfriend</span>?
+                                    <span className="question__highlight">love</span>?
                                 </h2>
                             </Reveal>
 
-                            <Reveal delay={1}>
+                            <Reveal delay={1.8}>
                                 <div className="question__response">
                                     <button
                                         className="question__btn question__btn--yes"

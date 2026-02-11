@@ -278,17 +278,19 @@ body {
 .act--artifact {
   background: linear-gradient(180deg, #251e35 0%, #1a1520 50%, #0f0d14 100%);
   min-height: auto;
-  padding: clamp(100px, 20vh, 300px) clamp(20px, 5vw, 60px);
+  padding: clamp(40px, 8vh, 100px) clamp(20px, 5vw, 60px) clamp(10px, 2vh, 30px);
 }
 
 .act--stillness {
   background: linear-gradient(180deg, #0f0d14 0%, var(--void) 100%);
-  min-height: 80vh;
+  min-height: 10vh;
+  padding: 0 clamp(20px, 5vw, 60px);
 }
 
 .act--question {
   background: linear-gradient(180deg, var(--void) 0%, #0a0610 50%, #0d0815 100%);
   min-height: 100vh;
+  padding-top: 5px;
 }
 
 /* ═══════════════════════════════════════════════════
@@ -704,8 +706,8 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  min-height: 60vh;
-  gap: 40px;
+  min-height: 15vh;
+  gap: 15px;
 }
 
 .stillness__dot {
@@ -746,8 +748,8 @@ body {
   flex-direction: column;
   align-items: center;
   text-align: center;
-  gap: 40px;
-  padding: clamp(60px, 12vh, 120px) 0;
+  gap: 30px;
+  padding: 40px 0;
 }
 
 .question__main {

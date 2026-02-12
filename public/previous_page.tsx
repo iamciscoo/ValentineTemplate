@@ -312,13 +312,14 @@ export default function Home() {
         const audio = audioRef.current;
         if (!audio) return;
 
-        audio.volume = 0.2;
+        audio.volume = 0.03;
         audio.preload = "none";
 
         const startMusic = () => {
             if (audioInitialized.current) return;
 
             audio.play().then(() => {
+                audio.volume = 0.03;
                 setIsPlaying(true);
                 audioInitialized.current = true;
                 // Clean up ALL listeners
@@ -348,11 +349,14 @@ export default function Home() {
         if (e) e.stopPropagation();
         if (!audioRef.current) return;
 
+        const audio = audioRef.current;
         if (isPlaying) {
-            audioRef.current.pause();
+            audio.pause();
             setIsPlaying(false);
         } else {
-            audioRef.current.play().then(() => {
+            audio.volume = 0.03;
+            audio.play().then(() => {
+                audio.volume = 0.03;
                 setIsPlaying(true);
             }).catch(err => console.error("Toggle failed:", err));
         }

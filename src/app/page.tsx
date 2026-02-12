@@ -318,11 +318,11 @@ export default function Home() {
             if (audioInitialized.current) return;
 
             audio.play().then(() => {
-                audio.volume = 0.05; // Set volume AFTER play starts for mobile compatibility
+                audio.volume = 0.07; // Restore volume after unlock
                 setIsPlaying(true);
                 audioInitialized.current = true;
                 // Clean up ALL listeners
-                ["click", "touchstart", "mousedown", "keydown", "scroll"].forEach(e => {
+                ["click", "touchstart", "mousedown", "pointerdown", "keydown"].forEach(e => {
                     window.removeEventListener(e, startMusic);
                 });
             }).catch(err => {
@@ -333,12 +333,12 @@ export default function Home() {
 
         // NEVER call audio.play() automatically on mount, it triggers the NotAllowedError.
         // Instead, we wait for the very first interaction.
-        ["click", "touchstart", "mousedown", "keydown", "scroll"].forEach(e => {
-            window.addEventListener(e, startMusic, { passive: false });
+        ["click", "touchstart", "mousedown", "pointerdown", "keydown"].forEach(e => {
+            window.addEventListener(e, startMusic, { passive: true });
         });
 
         return () => {
-            ["click", "touchstart", "mousedown", "keydown", "scroll"].forEach(e => {
+            ["click", "touchstart", "mousedown", "pointerdown", "keydown"].forEach(e => {
                 window.removeEventListener(e, startMusic);
             });
         };
@@ -377,10 +377,10 @@ export default function Home() {
 
             <audio
                 ref={audioRef}
-                src="/Beyoncé- All Night(Official Instrumental) [6gf_cPNKkOw] (1).mp3"
+                src="/all-night.mp3"
                 loop
                 playsInline
-                preload="none"
+                preload="auto"
             />
 
             {/* Subtle Music Toggle */}

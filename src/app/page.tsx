@@ -318,11 +318,11 @@ export default function Home() {
             if (audioInitialized.current) return;
 
             audio.play().then(() => {
-                audio.volume = 0.07; // Restore volume after unlock
+                audio.volume = 0.07;
                 setIsPlaying(true);
                 audioInitialized.current = true;
                 // Clean up ALL listeners
-                ["click", "touchstart", "mousedown", "pointerdown", "keydown"].forEach(e => {
+                ["click", "touchstart", "mousedown", "pointerdown", "keydown", "scroll"].forEach(e => {
                     window.removeEventListener(e, startMusic);
                 });
             }).catch(err => {
@@ -331,14 +331,13 @@ export default function Home() {
             });
         };
 
-        // NEVER call audio.play() automatically on mount, it triggers the NotAllowedError.
-        // Instead, we wait for the very first interaction.
-        ["click", "touchstart", "mousedown", "pointerdown", "keydown"].forEach(e => {
+        // Multi-event trigger for mobile compatibility
+        ["click", "touchstart", "mousedown", "pointerdown", "keydown", "scroll"].forEach(e => {
             window.addEventListener(e, startMusic, { passive: true });
         });
 
         return () => {
-            ["click", "touchstart", "mousedown", "pointerdown", "keydown"].forEach(e => {
+            ["click", "touchstart", "mousedown", "pointerdown", "keydown", "scroll"].forEach(e => {
                 window.removeEventListener(e, startMusic);
             });
         };

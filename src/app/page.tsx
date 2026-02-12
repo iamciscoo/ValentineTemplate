@@ -311,14 +311,14 @@ export default function Home() {
         const audio = audioRef.current;
         if (!audio) return;
 
-        audio.volume = 0.07;
+        audio.volume = 0.05;
         audio.preload = "none"; // Don't preload until requested or interacted with
 
         const startMusic = () => {
             if (audioInitialized.current) return;
 
             audio.play().then(() => {
-                audio.volume = 0.07; // Set volume AFTER play starts for mobile compatibility
+                audio.volume = 0.05; // Set volume AFTER play starts for mobile compatibility
                 setIsPlaying(true);
                 audioInitialized.current = true;
                 // Clean up ALL listeners

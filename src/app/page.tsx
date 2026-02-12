@@ -318,11 +318,11 @@ export default function Home() {
             if (audioInitialized.current) return;
 
             audio.play().then(() => {
-                audio.volume = 0.07;
+                audio.volume = 0.3; // Higher volume for testing/audibility
                 setIsPlaying(true);
                 audioInitialized.current = true;
                 // Clean up ALL listeners
-                ["click", "touchstart", "mousedown", "pointerdown", "keydown", "scroll"].forEach(e => {
+                ["click", "touchstart", "touchmove", "touchend", "mousedown", "pointerdown", "keydown", "scroll"].forEach(e => {
                     window.removeEventListener(e, startMusic);
                 });
             }).catch(err => {
@@ -331,13 +331,13 @@ export default function Home() {
             });
         };
 
-        // Multi-event trigger for mobile compatibility
-        ["click", "touchstart", "mousedown", "pointerdown", "keydown", "scroll"].forEach(e => {
+        // Expanded triggers for all possible mobile gestures including swipes
+        ["click", "touchstart", "touchmove", "touchend", "mousedown", "pointerdown", "keydown", "scroll"].forEach(e => {
             window.addEventListener(e, startMusic, { passive: true });
         });
 
         return () => {
-            ["click", "touchstart", "mousedown", "pointerdown", "keydown", "scroll"].forEach(e => {
+            ["click", "touchstart", "touchmove", "touchend", "mousedown", "pointerdown", "keydown", "scroll"].forEach(e => {
                 window.removeEventListener(e, startMusic);
             });
         };
